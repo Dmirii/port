@@ -1,0 +1,18 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	//include ../views/layouts/config
+	- const title = "Главная"
+	- const h_up = "X"
+	- const h_down = "V"
+
+
+block content
+	include ../blocks/modules/header/header.pug
+	include ../blocks/modules/about/about.pug
+	include ../blocks/modules/footer/footer.pug
+
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")
