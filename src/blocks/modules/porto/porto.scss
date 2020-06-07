@@ -1,0 +1,83 @@
+.porto{
+   
+
+        [data-tooltip] {
+        position: relative; /* Относительное позиционирование */ 
+       }
+
+       [data-tooltip]::after {
+        content: attr(data-tooltip); /* Выводим текст */
+        position: absolute; /* Абсолютное позиционирование */
+        width: 150px; /* Ширина подсказки */
+        left: 0; top: 0; /* Положение подсказки */
+        background:rgba(0, 0, 0, 0.8); /* Синий цвет фона */
+        color: #fff; /* Цвет текста */
+        padding: 0.5em; /* Поля вокруг текста */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+        pointer-events: none; /* Подсказка */
+        opacity: 0; /* Подсказка невидима */
+        transition: 1s; /* Время появления подсказки */
+       } 
+       
+       [data-tooltip]:hover::after {
+        opacity: 1; /* Показываем подсказку */
+        top: 2em; /* Положение подсказки */
+       }
+       
+    &__topwrapper{
+       
+        min-height: 200px;
+        margin-top: 50p auto;
+        text-align: right;
+        background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 60%,#fff),
+        linear-gradient(70deg,#dbedff 32%,#ebfff0);     
+    }
+
+    &__container{
+        padding-top: 10px;
+        margin-left: auto;
+        margin-right: auto;        
+        max-width: 900px;    
+        display: flex;
+        flex-wrap: wrap; 
+     }
+
+    &__title{
+        padding-top: 50px;
+        text-align: center;
+    }
+
+     &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid grey;
+        border-radius: 10px;
+        padding: 2px;
+        width: 190px;
+        margin: 10px;
+        min-height: 220px;
+
+        &-title{
+            text-align: center;
+            line-height: 25px;
+            text-transform: uppercase;
+        }
+
+        &-img{
+            width: 100%;
+            margin-top: 10px;          
+            border-radius: 10px;
+        }
+
+        &-descr-wrap{            
+            width: 90%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+     }
+
+    }
