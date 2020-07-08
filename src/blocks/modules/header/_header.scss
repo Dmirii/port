@@ -8,7 +8,12 @@
         
     }
     .header__mini-nav-up{
+        position: absolute;
+        top: -5px;
+        right: 45px;
         display:none;
+        font-size: 26px;
+       // padding-bottom: 3px;
     }
 
     z-index: 32;
@@ -37,8 +42,6 @@
         }
         animation: logo  6s infinite ;
     }
-
-    
 
     &__navmenu{
         display: flex;
@@ -72,6 +75,38 @@
 
     &__mini-nav{
         display: none;
+
+        &-down{
+            transition: all 1s;
+            margin: 4;
+            display: block;
+            position: relative;
+            right: 0px;
+            top: -6px;
+            width: 30px;
+            height: 20px;
+            span{
+                transition: all 1s;
+                position: absolute;
+                background-color: white;                
+                width: 100%;
+                height: 2px;
+                top: 9px;
+            }
+            &:before,
+            &:after   {
+                transition: all 1s;
+                content:'';
+                background-color:white;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+            }
+            &:before{
+                top: 18px;
+            }
+         }
     }
 
 }

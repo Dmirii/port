@@ -36,14 +36,13 @@
         overflow: hidden;
     }
     
-    .header{    
-        
+    .header{           
 
         &__navmenu{     
             z-index: 50;      
             //display: none;
             position: fixed;
-            top: -100%;
+            top: -110%;
             right: 0;
             width: 50%;
             height: 95vh;
@@ -57,9 +56,7 @@
             transition: all 1s;
             
             &-active{
-                top: 40px;
-
-               
+                top: 40px;              
                 
             }
         }
@@ -71,12 +68,12 @@
         &__mini-nav{
             padding-right: 30px;
             display: block;
-            transition: all 1s;
-           
+            transition: all 1s;  
+            a{
+                text-decoration: none;
+            }         
 
-            &-active{            
-              
-
+            &-active{         
                 .header__mini-nav-down{
                     display:none;
                 }
@@ -99,8 +96,7 @@
         &__item{
             flex-wrap: wrap;
             flex-direction: column;
-            max-width: 300px;
-            
+            max-width: 300px;            
         }
 
         &__descr{
@@ -109,6 +105,7 @@
     }
 
     .about{
+     
         &__title{
            // font-size: 28px;
         }
@@ -119,21 +116,35 @@
 
         &__promo-wrapper-item{
             //font-size: 18px;
+            min-width: 300px;
         }
         &__promo-wrapper-img{
            display: none;
         }
 
         &__skill-wrapper{
-            display: flex;
-            flex-wrap: wrap;
+            
+            display: flex;           
             flex-direction: column;
+            justify-content: center;
+            align-items: center
         }
         &__skils-item{
-            margin-bottom: 10px;
+            width: 90%;
+        }
+     
+
+
+    }
+
+    .porto{
+        &__item{
+            width: 90%;
         }
 
-
+        &__container{
+            justify-content: center;
+        }
     }
 
 }

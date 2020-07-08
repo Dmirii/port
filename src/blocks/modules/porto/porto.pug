@@ -3,9 +3,9 @@
 mixin portoItem(linkp,imgl,git,title,txt,altp)
     .porto__item
         .porto__item-title #{title}
-        a(data-tooltip=altp href=linkp target="_blank"): img(src=imgl, alt=altp).porto__item-img    
+        a(data-tooltip=altp href=linkp target="_blank"): img(src=imgl alt=altp).porto__item-img    
         .porto__item-descr-wrap
-            a(href=git target="_blank"): img(src='/img/GitHub.png', alt="")        
+            a(href=git target="_blank"): img(src='./img/GitHub.png', alt="")        
             .porto__item-txt #{txt}
          
 
@@ -14,15 +14,25 @@ section.porto
     .porto__topwrapper
         .porto__title Нажмите на картинку для просмотра работы. Нажмите на <i>OctoCat</i> для просмотра кода.
         .porto__container
-                +portoItem('https://dmirii.github.io/netclicks/','/img/net.png',
+                +portoItem('https://dmirii.github.io/Awito/','./img/awito.png',
+                        'https://github.com/Dmirii/Awito','Awito','работа №11','Мой JS')
+                +portoItem('https://dmirii.github.io/yoga/','./img/yoga.png',
+                        'https://github.com/Dmirii/yoga','Yoga туры','работа №10','Мой JS, Собрано Webpack')
+                +portoItem('https://dmirii.github.io/ghost/','./img/gb.png',
+                        'https://github.com/Dmirii/ghost','ghostbusters','работа №9','HTML+SCSS+JS. Интенсив по верстке. Glo')
+                +portoItem('https://dmirii.github.io/monyekeeper/','./img/monye.png',
+                        'https://github.com/Dmirii/monyekeeper','moneyKeeper','работа №8','Первое SPA. JS+  чуть адаптива FLEX+ media')
+                +portoItem('https://dimaa.ru','./img/porto.png',
+                        'https://github.com/Dmirii/myPort','ПОРТФОЛИО','работа №7','PUG + SASS +JS. Адаптив FLEX+ media')
+                +portoItem('https://dmirii.github.io/netclicks/','./img/net.png',
                         'https://github.com/Dmirii/netclicks','NETCLICKS','работа №6','Мой только JS')
-                +portoItem('https://dmirii.github.io/puls_p/','/img/puls.png',
+                +portoItem('https://dmirii.github.io/puls_p/','./img/puls.png',
                         'https://github.com/Dmirii/puls','ПОДБОР ПУЛЬСОМЕТРА','работа №5','HTML(Bootstrap Grid) + SASS + JS + БЭМ')
-                +portoItem('https://dmirii.github.io/uber/','/img/uber.png',
+                +portoItem('https://dmirii.github.io/uber/','./img/uber.png',
                         'https://github.com/Dmirii/uber','UBER PARTNERS','работа №4','HTML + Bootstrap + SASS ')
-                +portoItem('https://dmirii.github.io/Scss/','/img/wpi.png',
+                +portoItem('https://dmirii.github.io/Scss/','./img/wpi.png',
                         'https://dmirii.github.io/Scss/','WORDPRESS ИНТЕНСИВ','работа №3','Простой HTML и SASS')
-                +portoItem('https://dmirii.github.io/Mountain/','/img/mount.png',
+                +portoItem('https://dmirii.github.io/Mountain/','./img/mount.png',
                         'https://github.com/Dmirii/Scss','MOUNTAIN','работа №2','Простой HTML и CSS')           
-                +portoItem('https://dmirii.github.io/Culture_News/','/img/cnp.png',
+                +portoItem('https://dmirii.github.io/Culture_News/','./img/cnp.png',
                         'https://github.com/Dmirii/Culture_News','Новости культуры','работа №1','Простой HTML и CSS')
